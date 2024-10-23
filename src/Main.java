@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class Main {
@@ -166,9 +167,20 @@ public class Main {
   // keys are names and the values are emails.
   // Write this method to efficiently return the corresponding email or "Person not found" if appropriate
   // What is the time complexity of your solution?
-  // YOUR ANSWER HERE
+  // O(1)
   public static String emailLookupEfficient(HashMap<String, String> namesToEmails, String queryName) {
-    return null;
+
+    String queryEmail = " ";
+
+    if (!namesToEmails.containsKey(queryName))
+    {
+      System.out.println("Person not found");
+    }
+    else {
+      queryEmail = namesToEmails.get(queryName);
+    }
+
+    return queryEmail;
   }
 
   // What is the time complexity of this method?
